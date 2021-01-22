@@ -16,9 +16,14 @@ class {{class}} extends Seeder
     {
         {{prerun_event}}
 
-        \DB::table('{{table}}')->delete();
+        \Illuminate\Support\Facades\Schema::disableForeignKeyConstraints();
+
+        \DB::table('{{table}}')->truncate();
         {{insert_statements}}
-        
+
+
+        \Illuminate\Support\Facades\Schema::enableForeignKeyConstraints();
+
         {{postrun_event}}
     }
 }

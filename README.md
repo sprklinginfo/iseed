@@ -27,6 +27,19 @@ Latest Laravel versions have auto dicovery and automatically add service provide
 Orangehill\Iseed\IseedServiceProvider::class,
 ```
 
+### 3. For Laravel 7
+
+Create a iseed.php in config folder for override the default config
+
+```
+<?php
+return array(
+    'path' => '/database/seeds',
+    'namespace' => "\Database\Seeders\\",
+    'chunk_size' => 500 // Maximum number of rows per insert statement
+);
+```
+
 ## Artisan command options
 
 ### [table_name]
