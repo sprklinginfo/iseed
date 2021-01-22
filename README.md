@@ -8,22 +8,22 @@
 
 ### 1. Require with [Composer](https://getcomposer.org/)
 
+Since this is a fork, we need to create a custom branch and tell composer where to look for this new branch/version.
+
 Update the composer.json file to install from git
 
 ```
 "repositories": {
         "0": {
             "type": "vcs",
-            "url": "https://github.com/sprklinginfo/iseed.git"
+            "url": "git@github.com:sprklinginfo/iseed.git"
         },
        
     },
-"require-dev": {
-       "sprklinginfo/iseed": "dev-master",
-    },
 ```
+Our custom branch is custom-laravel7 so we need to prefix with 'dev-' to install:
 ```sh
-composer update
+composer require orangehill/iseed:dev-custom-laravel7 --dev
 ```
 
 **Laravel 5.3.7 and below** or **Laravel 4** need specific version
