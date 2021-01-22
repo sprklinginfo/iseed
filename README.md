@@ -54,6 +54,12 @@ return array(
     'chunk_size' => 500 // Maximum number of rows per insert statement
 );
 ```
+In laravel DatabaseSeeder.php file add the following two lines:
+```
+#iseed_start
+		
+#iseed_end
+```
 
 ## Artisan command options
 
