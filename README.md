@@ -7,8 +7,23 @@
 ## Installation
 
 ### 1. Require with [Composer](https://getcomposer.org/)
+
+Update the composer.json file to install from git
+
+```
+"repositories": {
+        "0": {
+            "type": "vcs",
+            "url": "https://github.com/sprklinginfo/iseed.git"
+        },
+       
+    },
+"require-dev": {
+       "sprklinginfo/iseed": "dev-master",
+    },
+```
 ```sh
-composer require orangehill/iseed
+composer update
 ```
 
 **Laravel 5.3.7 and below** or **Laravel 4** need specific version
