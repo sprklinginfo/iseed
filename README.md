@@ -6,7 +6,7 @@
 
 ## Installation
 
-### 1. Require with [Composer](https://getcomposer.org/)
+### 1. Require with [Composer](https://getcomposer.org/) (1.10.19)
 
 Since this is a fork, we need to create a custom branch and tell composer where to look for this new branch/version.
 
