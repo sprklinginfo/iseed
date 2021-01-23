@@ -23,7 +23,7 @@ Update the `composer.json` file to install from git
 ```
 Our custom branch is `custom-laravel7` so we need to prefix with 'dev-' to install:
 ```sh
-composer --dev require orangehill/iseed:dev-custom-laravel7 
+composer require --dev orangehill/iseed:dev-custom-laravel7 
 ```
 
 ### 2. Add Service Provider (Laravel 5.4 and below)
