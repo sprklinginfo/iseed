@@ -10,7 +10,7 @@
 
 Since this is a fork, we need to create a custom branch and tell composer where to look for this new branch/version.
 
-Update the composer.json file to install from git
+Update the `composer.json` file to install from git
 
 ```
 "repositories": {
@@ -21,16 +21,9 @@ Update the composer.json file to install from git
        
     },
 ```
-Our custom branch is custom-laravel7 so we need to prefix with 'dev-' to install:
+Our custom branch is `custom-laravel7` so we need to prefix with 'dev-' to install:
 ```sh
-composer require orangehill/iseed:dev-custom-laravel7 --dev
-```
-
-**Laravel 5.3.7 and below** or **Laravel 4** need specific version
-
-```sh
-composer require orangehill/iseed:2.2 # Laravel 5.3.7 and below
-composer require orangehill/iseed:1.1 # Laravel 4
+composer --dev require orangehill/iseed:dev-custom-laravel7 
 ```
 
 ### 2. Add Service Provider (Laravel 5.4 and below)
@@ -44,7 +37,7 @@ Orangehill\Iseed\IseedServiceProvider::class,
 
 ### 3. For Laravel 7
 
-Create a iseed.php in config folder for override the default config
+Create a iseed.php in config folder to override the default config
 
 ```
 <?php
@@ -73,6 +66,10 @@ php artisan iseed my_table
 ```
 ```
 php artisan iseed my_table,another_table
+```
+```sh
+$ php artisan iseed data_types,data_rows,menus,menu_items,roles,permissions,permission_role,settings,user_roles --clean --force --classnameprefix=iseed
+$ php artisan db:seed
 ```
 
 ### classnameprefix & classnamesuffix
